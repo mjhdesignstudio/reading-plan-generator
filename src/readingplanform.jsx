@@ -173,7 +173,7 @@ export function ReadingPlanForm({ onGenerate }) {
         {/* Generate Button */}
         <button
           onClick={generatePlan}
-          className="w-full rounded bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700 transition-colors"
+          className="generate-button"
         >
           Generate Reading Plan
         </button>
