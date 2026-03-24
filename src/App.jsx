@@ -6,14 +6,12 @@ export default function App() {
   const [readingPlan, setReadingPlan] = useState(null);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Header */}
       <header className="border-b border-gray-300 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-6">
-          <h1 className="text-3xl font-bold">Reading Plan Generator</h1>
-          <p className="mt-2 text-gray-600">
-            Create a personalized reading schedule for your book
-          </p>
+          <h1>Reading Plan Generator</h1>
+          <h4>Create a personalized reading schedule for your book</h4>
         </div>
       </header>
 

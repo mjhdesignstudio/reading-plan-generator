@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./readingplanform.css";
 
 export function ReadingPlanForm({ onGenerate }) {
   const [bookTitle, setBookTitle] = useState("");
@@ -100,14 +101,12 @@ export function ReadingPlanForm({ onGenerate }) {
 
   return (
     <div className="rounded-lg border-2 border-gray-300 bg-white p-6">
-      <h2 className="mb-6 text-xl font-bold">Book Details</h2>
+      <h2>Book Details</h2>
 
       <div className="space-y-5">
         {/* Book Title */}
         <div>
-          <label className="mb-2 block text-sm font-medium text-gray-700">
-            Book Title
-          </label>
+          <label className="form-label">Book Title</label>
           <input
             type="text"
             value={bookTitle}
@@ -119,9 +118,7 @@ export function ReadingPlanForm({ onGenerate }) {
 
         {/* Total Pages */}
         <div>
-          <label className="mb-2 block text-sm font-medium text-gray-700">
-            Total Pages
-          </label>
+          <label className="form-label">Total Pages</label>
           <input
             type="number"
             value={totalPages}
@@ -134,9 +131,7 @@ export function ReadingPlanForm({ onGenerate }) {
         {/* Date Range */}
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="mb-2 block text-sm font-medium text-gray-700">
-              Start Date
-            </label>
+            <label className="form-label">Start Date</label>
             <input
               type="date"
               value={startDate}
@@ -145,9 +140,7 @@ export function ReadingPlanForm({ onGenerate }) {
             />
           </div>
           <div>
-            <label className="mb-2 block text-sm font-medium text-gray-700">
-              End Date
-            </label>
+            <label className="form-label">End Date</label>
             <input
               type="date"
               value={endDate}
@@ -159,9 +152,7 @@ export function ReadingPlanForm({ onGenerate }) {
 
         {/* Reading Days */}
         <div>
-          <label className="mb-3 block text-sm font-medium text-gray-700">
-            Reading Days
-          </label>
+          <label className="form-label">Reading Days</label>
           <div className="grid grid-cols-4 gap-2">
             {daysOfWeek.map((day) => (
               <button
