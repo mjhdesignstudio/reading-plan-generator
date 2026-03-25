@@ -6,18 +6,18 @@ export default function App() {
   const [readingPlan, setReadingPlan] = useState(null);
 
   return (
-    <div className="min-h-screen">
+    <div className="container">
       {/* Header */}
-      <header className="border-b border-gray-300 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-6">
+      <header>
+        <div className="header">
           <h1>Reading Plan Generator</h1>
           <h4>Create a personalized reading schedule for your book</h4>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="mx-auto max-w-6xl px-6 py-8">
-        <div className="grid gap-8 lg:grid-cols-2">
+      <main>
+        <div>
           {/* Left Column - Form */}
           <div>
             <ReadingPlanForm onGenerate={setReadingPlan} />
@@ -29,6 +29,26 @@ export default function App() {
           </div>
         </div>
       </main>
+      <hr />
+      <footer>
+        <div className="app-footer">
+          <div>
+            {" "}
+            <a href="mailto:hello@mjhdesignstudio.com">
+              hello@mjhdesignstudio.com
+            </a>
+          </div>
+          <div>
+            This app was coded by{" "}
+            <a href="https://www.mjhdesignstudio.com">Melissa Hundley</a> and is
+            open-source on{" "}
+            <a href="https://github.com/mjhdesignstudio/reading-plan-generator">
+              GitHub
+            </a>
+            .
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

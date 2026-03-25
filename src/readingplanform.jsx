@@ -6,15 +6,7 @@ export function ReadingPlanForm({ onGenerate }) {
   const [totalPages, setTotalPages] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [readingDays, setReadingDays] = useState([
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ]);
+  const [readingDays, setReadingDays] = useState([]);
 
   const daysOfWeek = [
     "Monday",
@@ -100,7 +92,7 @@ export function ReadingPlanForm({ onGenerate }) {
   };
 
   return (
-    <div className="rounded-lg border-2 border-gray-300 bg-white p-6">
+    <div className="form-container">
       <h2>Book Details</h2>
 
       <div className="space-y-5">
@@ -153,15 +145,15 @@ export function ReadingPlanForm({ onGenerate }) {
         {/* Reading Days */}
         <div>
           <label className="form-label">Reading Days</label>
-          <div className="grid grid-cols-4 gap-2">
+          <div>
             {daysOfWeek.map((day) => (
               <button
                 key={day}
                 onClick={() => toggleDay(day)}
-                className={`rounded border px-3 py-2 text-sm transition-colors ${
+                className={`day-button ${
                   readingDays.includes(day)
-                    ? "border-blue-500 bg-blue-500 text-white"
-                    : "border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
+                    ? "day-button--selected"
+                    : "day-button--default"
                 }`}
               >
                 {day.slice(0, 3)}
@@ -171,10 +163,7 @@ export function ReadingPlanForm({ onGenerate }) {
         </div>
 
         {/* Generate Button */}
-        <button
-          onClick={generatePlan}
-          className="generate-button"
-        >
+        <button onClick={generatePlan} className="generate-button">
           Generate Reading Plan
         </button>
       </div>

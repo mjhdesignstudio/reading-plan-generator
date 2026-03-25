@@ -1,10 +1,66 @@
+h2 {
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fdfaf6;
+  border-radius: 6px;
+}
+
 .form-label {
   display: inline-block;
   padding: 10px;
+  font-weight: bold;
+}
+
+.day-button {
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 5px 15px;
+  font-size: 14px;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Default (not selected) */
+.day-button--default {
+  border-color: #e4efe7;
+  background-color: #e4efe7;
+  color: #374151;
+}
+
+.day-button--default:hover {
+  background-color: #fdfaf6;
+}
+
+/* Selected state */
+.day-button--selected {
+  border-color: #99bc85;
+  background-color: #99bc85;
+  color: #ffffff;
 }
 
 .generate-button {
   margin: 20px;
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1px solid #e4efe7;
+  background-color: #99bc85;
+  color: #fdfaf6;
+  filter: drop-shadow(3px 3px 6px #c6c7cb);
+}
+
+.generate-button:hover {
+  background-color: #e4efe7;
+  color: grey;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
