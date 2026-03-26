@@ -98,7 +98,7 @@ export function ReadingPlanForm({ onGenerate }) {
       <div className="space-y-5">
         {/* Book Title */}
         <div>
-          <label className="form-label">Book Title</label>
+          <label className="form-label">Book Title:</label>
           <input
             type="text"
             value={bookTitle}
@@ -110,7 +110,7 @@ export function ReadingPlanForm({ onGenerate }) {
 
         {/* Total Pages */}
         <div>
-          <label className="form-label">Total Pages</label>
+          <label className="form-label">Total Pages:</label>
           <input
             type="number"
             value={totalPages}
@@ -123,7 +123,7 @@ export function ReadingPlanForm({ onGenerate }) {
         {/* Date Range */}
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="form-label">Start Date</label>
+            <label className="form-label">Start Date:</label>
             <input
               type="date"
               value={startDate}
@@ -132,7 +132,7 @@ export function ReadingPlanForm({ onGenerate }) {
             />
           </div>
           <div>
-            <label className="form-label">End Date</label>
+            <label className="form-label">End Date:</label>
             <input
               type="date"
               value={endDate}
@@ -144,7 +144,7 @@ export function ReadingPlanForm({ onGenerate }) {
 
         {/* Reading Days */}
         <div>
-          <label className="form-label">Reading Days</label>
+          <label className="form-label">Reading Days:</label>
           <div>
             {daysOfWeek.map((day) => (
               <button

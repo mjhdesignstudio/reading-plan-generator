@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  font-family: "Gruppo", sans-serif;
+  font-family: "Ysabeau SC", sans-serif;
 }
 
 .container {
@@ -17,6 +17,8 @@ body {
 h1 {
   margin: 0 auto;
   text-align: center;
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-size: 42px;
 }
 
 h4 {
