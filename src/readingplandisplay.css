@@ -29,3 +29,14 @@
   font-size: 24px;
   font-weight: 500;
 }
+
+.download-pdf-button {
+  display: block;
+  margin: 40px auto;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #e4efe7;
+  background-color: #99bc85;
+  color: #fdfaf6;
+  filter: drop-shadow(3px 3px 6px #c6c7cb);
+}
