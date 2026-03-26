@@ -92,81 +92,85 @@ export function ReadingPlanForm({ onGenerate }) {
   };
 
   return (
-    <div className="form-container">
-      <h2>Book Details</h2>
+    <div>
+      <div className="form-container">
+        <h2>Book Details</h2>
 
-      <div className="space-y-5">
-        {/* Book Title */}
-        <div>
-          <label className="form-label">Book Title:</label>
-          <input
-            type="text"
-            value={bookTitle}
-            onChange={(e) => setBookTitle(e.target.value)}
-            placeholder="Enter book title"
-            className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
-          />
-        </div>
-
-        {/* Total Pages */}
-        <div>
-          <label className="form-label">Total Pages:</label>
-          <input
-            type="number"
-            value={totalPages}
-            onChange={(e) => setTotalPages(e.target.value)}
-            placeholder="e.g., 300"
-            className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
-          />
-        </div>
-
-        {/* Date Range */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-5">
+          {/* Book Title */}
           <div>
-            <label className="form-label">Start Date:</label>
+            <label className="form-label">Book Title:</label>
             <input
-              type="date"
-              value={startDate}
-              onChange={(e) => setStartDate(e.target.value)}
+              type="text"
+              value={bookTitle}
+              onChange={(e) => setBookTitle(e.target.value)}
+              placeholder="Enter book title"
               className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
             />
           </div>
+
+          {/* Total Pages */}
           <div>
-            <label className="form-label">End Date:</label>
+            <label className="form-label">Total Pages:</label>
             <input
-              type="date"
-              value={endDate}
-              onChange={(e) => setEndDate(e.target.value)}
+              type="number"
+              value={totalPages}
+              onChange={(e) => setTotalPages(e.target.value)}
+              placeholder="e.g., 300"
               className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
             />
           </div>
-        </div>
 
-        {/* Reading Days */}
-        <div>
-          <label className="form-label">Reading Days:</label>
-          <div>
-            {daysOfWeek.map((day) => (
-              <button
-                key={day}
-                onClick={() => toggleDay(day)}
-                className={`day-button ${
-                  readingDays.includes(day)
-                    ? "day-button--selected"
-                    : "day-button--default"
-                }`}
-              >
-                {day.slice(0, 3)}
-              </button>
-            ))}
+          {/* Date Range */}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="form-label">Start Date:</label>
+              <input
+                type="date"
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
+                className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
+              />
+            </div>
+            <div>
+              <label className="form-label">End Date:</label>
+              <input
+                type="date"
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+                className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Generate Button */}
-        <button onClick={generatePlan} className="generate-button">
-          Generate Reading Plan
-        </button>
+          {/* Reading Days */}
+          <div>
+            <label className="form-label">Reading Days:</label>
+            <div>
+              {daysOfWeek.map((day) => (
+                <button
+                  key={day}
+                  onClick={() => toggleDay(day)}
+                  className={`day-button ${
+                    readingDays.includes(day)
+                      ? "day-button--selected"
+                      : "day-button--default"
+                  }`}
+                >
+                  {day.slice(0, 3)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Generate Button */}
+          <button onClick={generatePlan} className="generate-button">
+            Generate Reading Plan
+          </button>
+        </div>
       </div>
+      <br />
+      <hr />
     </div>
   );
 }
