@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import "./readingplandisplay.css";
-import generatePDF from "react-to-pdf";
 
 export function ReadingPlanDisplay({ plan }) {
   const [schedule, setSchedule] = useState([]);
@@ -102,15 +101,7 @@ export function ReadingPlanDisplay({ plan }) {
           </div>
         </div>
       </div>
-      <button
-        onClick={() =>
-          generatePDF(targetRef, {
-            filename: "reading-plan.pdf",
-            page: { margin: 20 },
-          })
-        }
-        className="download-pdf-button"
-      >
+      <button onClick={() => window.print()} className="download-pdf-button">
         Download PDF
       </button>
     </div>

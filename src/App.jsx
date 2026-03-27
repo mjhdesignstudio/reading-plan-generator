@@ -39,7 +39,7 @@ export default function App() {
             </a>
           </div>
           <div>
-            This app was coded by{" "}
+            The Reading Plan Generator was coded by{" "}
             <a href="https://www.mjhdesignstudio.com">Melissa Hundley</a> and is
             open-source on{" "}
             <a href="https://github.com/mjhdesignstudio/reading-plan-generator">

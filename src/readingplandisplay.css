@@ -40,3 +40,52 @@
   color: #fdfaf6;
   filter: drop-shadow(3px 3px 6px #c6c7cb);
 }
+
+.download-pdf-button:hover {
+  background-color: #8cb06e;
+  filter: drop-shadow(4px 4px 8px #c6c7cb);
+  cursor: pointer;
+}
+
+@media print {
+  @page {
+    size: auto;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .download-pdf-button,
+  .progress-checkbox {
+    display: none;
+  }
+
+  .form-container,
+  .header {
+    display: none;
+  }
+
+  .plan-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .reading-plan-container {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .schedule-day {
+    page-break-inside: avoid;
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  body {
+    background: white;
+  }
+}
