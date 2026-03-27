@@ -15,11 +15,9 @@ export function ReadingPlanDisplay({ plan }) {
   const targetRef = useRef();
 
   const toggleComplete = (index) => {
-    setSchedule((prev) =>
-      prev.map((item, i) =>
-        i === index ? { ...item, completed: !item.completed } : item,
-      ),
-    );
+    const newSchedule = [...schedule];
+    newSchedule[index].completed = !newSchedule[index].completed;
+    setSchedule(newSchedule);
   };
 
   if (!plan) {
