@@ -10,7 +10,7 @@ export function ReadingPlanDisplay({ plan }) {
     if (plan?.schedule) {
       setSchedule(plan.schedule);
     }
-  }, [plan]);
+  }, [plan?.schedule]);
 
   const targetRef = useRef();
 
